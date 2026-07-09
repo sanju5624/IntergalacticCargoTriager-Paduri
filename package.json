@@ -1,0 +1,25 @@
+{
+  "name": "breadwinner-project",
+  "version": "1.0.0",
+  "main": "parse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanju5624/IntergalacticCargoTriager-Paduri.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanju5624/IntergalacticCargoTriager-Paduri/issues"
+  },
+  "homepage": "https://github.com/sanju5624/IntergalacticCargoTriager-Paduri#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
