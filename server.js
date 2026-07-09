@@ -16,6 +16,16 @@ app.use((req, res, next) => {
   next();
 });
 
+// Business Rule 3: Middleware to check for X-System-Override: true header
+app.use((req, res, next) => {
+  const overrideHeader = req.header('X-System-Override');
+  if (overrideHeader && overrideHeader.trim().toLowerCase() === 'true') {
+    console.log('System override header detected. Returning 418 I\'m a teapot.');
+    return res.status(418).send('System override denied');
+  }
+  next();
+});
+
 // Endpoint: GET /api/cargo
 app.get('/api/cargo', (req, res) => {
   const dataPath = path.join(__dirname, 'output', 'Task 1 - Paduri - Parser.json');
